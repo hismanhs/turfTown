@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 interface OrBarProp {
     Text?: string;
@@ -11,22 +11,22 @@ const TimerComponent: React.FC<OrBarProp> = ({
     const [isDisabled, setIsDisabled] = useState(true); // Disable the button during the countdown
 
     useEffect(() => {
-        let interval:any;
+        let interval: any;
         if (timer > 0 && isDisabled) {
             interval = setInterval(() => {
                 setTimer((prev) => prev - 1);
             }, 1000);
         } else if (timer === 0) {
             setIsDisabled(false);
-            setTimer(62); 
+            setTimer(62);
         }
 
         return () => clearInterval(interval);
     }, [timer, isDisabled]);
 
     const handleResendCode = () => {
-        setIsDisabled(true); 
-        setTimer(62); 
+        setIsDisabled(true);
+        setTimer(62);
     };
     return (
 

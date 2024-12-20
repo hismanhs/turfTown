@@ -1,41 +1,56 @@
-.InputBox{
-    border: 2px solid #D6D6D6;
-    padding: 16px 12px;
-    border-radius: 12px;
-    width: 100%;
+.InputBox {
+  border: 2px solid #D6D6D6;
+  padding: 16px 12px;
+  border-radius: 12px;
+  width: 100%;
 }
+
 .InputBox:hover {
   /* box-shadow: 0 4px 4px #D6D6D6; */
-  border: 2px solid #A0A0A0; 
-  }
+  border: 2px solid #A0A0A0;
+}
+
 .InputBox:focus {
-  outline: none; 
-  border: 2px solid #9AB2FF; 
+  outline: none;
+  border: 2px solid #9AB2FF;
 }
-.error{
-    position: absolute;
-    top: 16px;
-    right: 14px;
-    color: #FF6868;
-    font-family:'Nunito' ;
-    font-weight: 700;
-    size: 17px;
-    line-height: 22.19px;
+
+.error {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  color: #FF6868;
+  font-family: 'Nunito';
+  font-weight: 700;
+  size: 17px;
+  line-height: 22.19px;
 }
-.errorInput{
-    border: 2px solid #FDBFBF;
-    padding: 16px 12px;
-    border-radius: 12px;
-    width: 100%;
-    background-color: #FFF7F7;
+
+.errorInput {
+  border: 2px solid #FDBFBF;
+  padding: 16px 12px;
+  border-radius: 12px;
+  width: 100%;
+  background-color: #FFF7F7;
 }
+
 .errorInput:hover {
-    border: 2px solid #FDBFBF; 
-    }
-  .errorInput:focus {
-    outline: none; 
-    border: 2px solid #FDBFBF; 
-  }
-  .spacing {
-    letter-spacing: 16px;
-  }
+  border: 2px solid #FDBFBF;
+}
+
+.errorInput:focus {
+  outline: none;
+  border: 2px solid #FDBFBF;
+}
+
+.spacing {
+  letter-spacing: 16px;
+}
+
+.otpContainer {
+  display: flex;
+  margin: 20px 0px;
+  gap: 6px;
+  position: relative;
+  width: 100%;
+}

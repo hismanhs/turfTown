@@ -17,7 +17,7 @@ const OtpComponent: React.FC<otpScreenProp> = ({
     const textClass = useMemo(() => Icon ? `${styles.InputBox} ${styles.spacing}` : styles.InputBox, [Icon])
 
     return (
-        <div style={{ display: 'flex', margin: '20px 0px', gap: '6px', position: 'relative', width: '100%' }}  >
+        <div className={styles.otpContainer} >
                 <input className={Error ? `${styles.errorInput} ${styles.spacing}` : textClass} placeholder="Enter the 4 digit code" onChange={handleChange} value={number} />
             {Error && <div className={styles.error}>Incorrect Code! </div>}
         </div>
