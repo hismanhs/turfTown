@@ -1,0 +1,63 @@
+.buttonBar {
+  min-width: 476px;
+  height: 56px;
+  background-color: #FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  border: 1px solid #D6D6D6;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttonBar:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.inActiveButtonBar {
+  min-width: 476px;
+  height: 56px;
+  background-color: #E7E7E7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  border: 1px solid #D0D0D0;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #A4A4A4;
+}
+
+.textStyle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.55px;
+}
+
+.active {
+  min-width: 476px;
+  height: 56px;
+  background-color: #5D7CE3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  border: 1px solid #0000001F;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+}
+
+.active:hover {
+  background-color: #4A6ACF;
+}

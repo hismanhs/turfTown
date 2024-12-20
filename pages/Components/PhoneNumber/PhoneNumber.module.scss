@@ -1,0 +1,46 @@
+.verticalLine {
+    width: 2px;
+    height: 20px;
+    background-color: #E8E8E8;
+}
+
+.container {
+    display: flex;
+    margin: 20px 0px;
+    gap: 10px;
+    width: 95%;
+}
+
+.countryCodeContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 12px;
+    gap: 8px;
+    background-color: #FFFF;
+    width: 20%;
+    border: 1px solid #D6D6D6;
+    border-radius: 12px;
+    align-items: center;
+    cursor: pointer;
+}
+.inputBoxContainer{
+    width: 80%;
+}
+
+.InputBox {
+    border: 2px solid #D6D6D6;
+    padding: 16px 12px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.InputBox:hover {
+    border: 2px solid #D6D6D6;
+}
+
+.InputBox:focus {
+    outline: none;
+    /* Remove the focus outline */
+    border: 2px solid #9AB2FF;
+    /* Remove any border if it's applied */
+}

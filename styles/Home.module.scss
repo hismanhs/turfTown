@@ -1,0 +1,72 @@
+$primary-color: #EBEBED;
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .leftPane {
+    flex: 1;
+    display: flex;
+    background-color: $primary-color;;
+  
+  }
+  
+  .rightPane {
+    flex: 1;
+    background-color: $primary-color;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .largeText {
+    margin: 2rem 0rem 1rem 0rem;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 43.65px;
+  }
+  
+  .smallText {
+    font-size: 20px;
+    font-weight: 500;
+    color: #585858;
+    line-height: 27.28px;
+  }
+  
+  
+  .OrBarLine {
+    height: 2px;
+    width: 50%;
+    background-color: rgb(200, 200, 200);
+  }
+  
+  .OrText {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 20px;
+    line-height: 21.82px;
+    font-family: Nuttito;
+  }
+  
+  .italicText {
+    font-style: italic;
+    font-weight: 600;
+    color: #7D7C7C;
+    size: 22px;
+    position: absolute;
+    bottom: 40px;
+  }
+  
+  .OrContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .iconStyle {
+    margin-left: 6px;
+  }
