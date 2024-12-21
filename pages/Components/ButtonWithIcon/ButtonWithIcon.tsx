@@ -4,7 +4,7 @@ import styles from "./ButtonnWithIcon.module.scss";
 import Image from "next/image";
 
 interface ButtonWithIconProp {
-  children: any;
+  children?: any;
   Text: string;
   ActiveStatus: string;
   handleClick: () => void
