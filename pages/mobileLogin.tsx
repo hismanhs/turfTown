@@ -34,7 +34,8 @@ const MobileLogin = () => {
             <ButtonWithIcon
                 Text={'Continue'}
                 ActiveStatus={buttonActive ? 'active' : 'inactive'}
-                handleClick={() => buttonActive && handleMobileClick()} />
+                handleClick={() => buttonActive && handleMobileClick()} >
+                        </ButtonWithIcon>
         </LoginLayout>
     );
 };

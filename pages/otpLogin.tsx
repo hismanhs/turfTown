@@ -36,7 +36,8 @@ const OtpLogin = () => {
             <ButtonWithIcon
                 Text={'Continue'}
                 ActiveStatus={buttonActive ? 'active' : 'inactive'}
-                handleClick={() => buttonActive && handleMobileClick()} />
+                handleClick={() => buttonActive && handleMobileClick()} >
+            </ButtonWithIcon>
             <div style={{ display: 'flex', gap: '6px' }}>
                 <div style={{ fontSize: '18px', fontFamily: 'Nuttito' }}>Didn’t get it?</div>
                 <TimerComponent Text="Resend Code" />

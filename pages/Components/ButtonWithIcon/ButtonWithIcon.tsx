@@ -4,14 +4,14 @@ import styles from "./ButtonnWithIcon.module.scss";
 import Image from "next/image";
 
 interface ButtonWithIconProp {
-  Icon?: any;
+  children: any;
   Text: string;
   ActiveStatus: string;
   handleClick: () => void
 }
 
 const ButtonWithIcon: React.FC<ButtonWithIconProp> = ({
-  Icon,
+  children,
   Text,
   ActiveStatus,
   handleClick
@@ -27,7 +27,7 @@ const ButtonWithIcon: React.FC<ButtonWithIconProp> = ({
   return (
     <button className={buttonClass} role="button" onClick={handleClick} >
       <div className={styles.container}>
-        {Icon && <Image src={Icon} alt="My SVG Icon" width={22} height={22} />}
+        {children && children}
         <div className={textClass} >{Text}</div>
       </div>
     </button>
