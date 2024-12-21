@@ -1,8 +1,10 @@
 
 import React, { useState } from "react";
-import { ButtonWithIcon, LoginLayout, OtpComponent } from "./Components";
 import { useRouter } from "next/router";
 import TimerComponent from "./Components/TimerComponent";
+import LoginLayout from "./Components/LoginLayout";
+import OtpComponent from "./Components/OtpComponent/OtpComponent";
+import ButtonWithIcon from "./Components/ButtonWithIcon/ButtonWithIcon";
 
 const OtpLogin = () => {
     const router = useRouter();

@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -18,5 +19,8 @@
     "@types/node": "22.10.2",
     "@types/react": "19.0.1",
     "typescript": "5.7.2"
+  },
+  "resolutions": {
+    "webpack": "5.21.2"
   }
 }

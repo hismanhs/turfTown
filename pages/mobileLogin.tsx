@@ -1,7 +1,9 @@
 
 import React, { useState } from "react";
-import { ButtonWithIcon, LoginLayout, PhoneNumber } from "./Components";
 import { useRouter } from "next/router";
+import LoginLayout from "./Components/LoginLayout";
+import PhoneNumber from "./Components/PhoneNumber/PhoneNumber";
+import ButtonWithIcon from "./Components/ButtonWithIcon/ButtonWithIcon";
 
 const MobileLogin = () => {
     const router = useRouter();
@@ -12,7 +14,6 @@ const MobileLogin = () => {
         const inputValue = e.target.value;
         if (/^\d{0,10}$/.test(inputValue)) {
             setNumber(inputValue);
-            console.log(inputValue.length, 'inputValue.lengt')
             if (inputValue.length == 10) {
                 setButtonActive(true)
             } else {

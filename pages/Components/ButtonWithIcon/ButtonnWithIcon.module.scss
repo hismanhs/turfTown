@@ -1,5 +1,5 @@
 .buttonBar {
-  min-width: 476px;
+  min-width: 100%;
   height: 56px;
   background-color: #FFFF;
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .inActiveButtonBar {
-  min-width: 476px;
+  min-width: 100%;
   height: 56px;
   background-color: #E7E7E7;
   display: flex;
@@ -44,7 +44,7 @@
 }
 
 .active {
-  min-width: 476px;
+  min-width: 100%;
   height: 56px;
   background-color: #5D7CE3;
   display: flex;

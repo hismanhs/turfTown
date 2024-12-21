@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
-import { CoolShap, TurfTown } from "../icons";
 import AnimationImage from "./AnimationImage";
 
 interface LoginLayoutProp {
@@ -23,9 +22,9 @@ const LoginLayout: React.FC<LoginLayoutProp> = ({
             <div className={styles.leftPane}>
             {/* 5rem 8rem 0rem 14rem */}
                 <div  className={styles.leftPanelContainer}>
-                    <Image src={TurfTown} alt="TurfTownIcon" width={114.19} height={63.11} />
+                    <Image src={'../icons/TTLogoWhite.svg'} alt="TurfTownIcon" width={114.19} height={63.11} />
                     <div className={styles.largeText}>{largeText}
-                    {Icon && <Image src={CoolShap} className={styles.iconStyle} alt="CoolShapIcon" width={22} height={22} />}
+                    {Icon && <Image src={'../icons/CoolShape.svg'} className={styles.iconStyle} alt="CoolShapIcon" width={22} height={22} />}
                     </div>
                     <div className={styles.smallText}>{smallText}</div>
                     {children}
