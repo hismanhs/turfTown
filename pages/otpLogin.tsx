@@ -37,7 +37,7 @@ const OtpLogin = () => {
         setIsVisible(true); 
         setTimeout(() => {
           setIsVisible(false); 
-        }, 3000);
+        }, 5000);
     };
     return (
         <>
@@ -50,10 +50,10 @@ const OtpLogin = () => {
                 </ButtonWithIcon>
                 <div className={styles.flex}>
                     <div className={styles.textDidntGet}> Didn’t get it? </div>
-                    <ResendTimer Text="Resend Code" duration={62} showPopUp={hideElement} />
+                    <ResendTimer Text="Resend Code" duration={6} showPopUp={hideElement} />
                 </div>
             </LoginLayout>
-            {isVisible && <Image src={'../icons/CodeResend.svg'} className={`${styles.element} ${!isVisible ? styles.hidden : ''}`} alt="CodeResendIcon" width={197} height={52} />}
+            {isVisible && <Image src={'../icons/CodeResend.svg'} className={`${styles.CodeResend} ${!isVisible ? styles.CodeResendhidden : ''}`} alt="CodeResendIcon" width={197} height={52} />}
         </>
     );
 };
