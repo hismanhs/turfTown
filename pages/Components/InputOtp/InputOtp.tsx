@@ -3,19 +3,19 @@ import React, { useMemo } from "react";
 import styles from "./InputOtp.module.scss";
 
 interface InputOtpProp {
-    Icon: boolean;
+    ActiveInput: boolean;
     number: number;
     handleChange: (e: any) => void;
     Error?: boolean
 }
 
 const InputOtp: React.FC<InputOtpProp> = ({
-    Icon,
+    ActiveInput,
     number,
     handleChange,
     Error = false
 }) => {
-    const textClass = useMemo(() => Icon ? `${styles.InputBox} ${styles.spacing}` : styles.InputBox, [Icon])
+    const textClass = useMemo(() => ActiveInput ? `${styles.InputBox} ${styles.spacing}` : styles.InputBox, [ActiveInput])
 
     return (
         <div className={styles.otpContainer} >

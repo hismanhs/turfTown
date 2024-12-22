@@ -10,7 +10,6 @@ const PhoneNumber: React.FC<PhoneNumberProp> = ({
     number,
     handleChange
 }) => {
-
     return (
         <div className={styles.container}  >
             <div className={styles.countryCodeContainer}>
@@ -19,7 +18,9 @@ const PhoneNumber: React.FC<PhoneNumberProp> = ({
                 <div>{"+ 91"}</div>
             </div>
             <div className={styles.inputBoxContainer}>
-                <input className={styles.InputBox} placeholder="Enter your phone number" onChange={handleChange} value={number} />
+                <input
+                    className={number?.toString() !== '' ? `${styles.InputBox} ${styles.spacing}` : styles.InputBox}
+                    placeholder="Enter your phone number" onChange={handleChange} value={number} />
             </div>
         </div>
     );
