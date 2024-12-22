@@ -1,14 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import styles from './ResendTimer.module.scss'
 
-interface OrBarProp {
+interface ResendTimerProp {
     Text?: string;
+    duration: number;
+    showPopUp: () => void
 }
 
-const TimerComponent: React.FC<OrBarProp> = ({
-    Text
+const ResendTimer: React.FC<ResendTimerProp> = ({
+    Text, duration, showPopUp
 }) => {
-    const [timer, setTimer] = useState(62); // 1 minute 2 seconds
+    const [timer, setTimer] = useState(duration); // 1 minute 2 seconds
     const [isDisabled, setIsDisabled] = useState(true); // Disable the button during the countdown
 
     useEffect(() => {
@@ -19,7 +22,7 @@ const TimerComponent: React.FC<OrBarProp> = ({
             }, 1000);
         } else if (timer === 0) {
             setIsDisabled(false);
-            setTimer(62);
+            setTimer(duration);
         }
 
         return () => clearInterval(interval);
@@ -27,16 +30,17 @@ const TimerComponent: React.FC<OrBarProp> = ({
 
     const handleResendCode = () => {
         setIsDisabled(true);
-        setTimer(62);
+        setTimer(duration);
+        showPopUp()
     };
     return (
 
         <div>
-            {!isDisabled ? <div onClick={handleResendCode} style={{ color: '#305DF0', fontSize: '18px', fontFamily: 'Nuttito', textDecorationLine: 'underline',cursor:'pointer' }}>{Text}</div> : <div style={{
-                color: '#888888', fontSize: '18px', fontFamily: 'Nuttito',
-            }}>Resend in {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, '0')}</div>}
+            {!isDisabled ? <div onClick={handleResendCode} role="Button" className={styles.resendButton}>{Text}</div> : <div className={styles.resendText}>
+                Resend in {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, '0')}
+            </div>}
         </div >
     );
 };
 
-export default TimerComponent;
+export default ResendTimer;

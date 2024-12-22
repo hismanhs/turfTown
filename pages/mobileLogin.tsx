@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import LoginLayout from "./Components/LoginLayout";
+import LoginLayout from "./Components/LoginLayout/LoginLayout";
 import PhoneNumber from "./Components/PhoneNumber/PhoneNumber";
 import ButtonWithIcon from "./Components/ButtonWithIcon/ButtonWithIcon";
 
@@ -34,8 +34,7 @@ const MobileLogin = () => {
             <ButtonWithIcon
                 Text={'Continue'}
                 ActiveStatus={buttonActive ? 'active' : 'inactive'}
-                handleClick={() => buttonActive && handleMobileClick()} >
-                        </ButtonWithIcon>
+                handleClick={() => buttonActive && handleMobileClick()} />
         </LoginLayout>
     );
 };

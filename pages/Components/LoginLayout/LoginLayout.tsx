@@ -1,6 +1,6 @@
 
 import React from "react";
-import styles from "../../styles/Home.module.scss";
+import styles from "./LoginLayout.module.scss";
 import Image from "next/image";
 import AnimationImage from "./AnimationImage";
 
@@ -20,7 +20,6 @@ const LoginLayout: React.FC<LoginLayoutProp> = ({
     return (
         <div className={styles.container}>
             <div className={styles.leftPane}>
-            {/* 5rem 8rem 0rem 14rem */}
                 <div  className={styles.leftPanelContainer}>
                     <Image src={'../icons/TTLogoWhite.svg'} alt="TurfTownIcon" width={114.19} height={63.11} />
                     <div className={styles.largeText}>{largeText}
@@ -31,7 +30,7 @@ const LoginLayout: React.FC<LoginLayoutProp> = ({
                 </div>
             </div>
             <div className={styles.rightPane}>
-                <AnimationImage Icon={true}/>
+                <AnimationImage/>
                 <div className={styles.italicText} >Lets keep the world playing!</div>
             </div>
         </div>

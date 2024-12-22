@@ -1,18 +1,15 @@
 
-import React, { useMemo, useState } from "react";
+import React from "react";
 import styles from "./PhoneNumber.module.scss";
 interface PhoneNumberProp {
-    Icon?: any;
     number: number;
     handleChange: (e: any) => void
 }
 
 const PhoneNumber: React.FC<PhoneNumberProp> = ({
-    Icon,
     number,
     handleChange
 }) => {
-
 
     return (
         <div className={styles.container}  >

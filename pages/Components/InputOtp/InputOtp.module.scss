@@ -1,0 +1,44 @@
+@use '../../../styles/mixins' as mx;
+@use '../../../styles/variables' as vars;
+
+.InputBox {
+  border: 2px solid vars.$inputBox-border-color;
+  padding: 16px 12px;
+  border-radius: 12px;
+  width: 100%;
+  @include mx.hoverwithBorder(vars.$input-box-border, 0.3s);
+  @include mx.inputFocus(vars.$inputBox-primary-color, 0.3s);
+}
+
+.error {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  color: vars.$error-primary;
+  font-weight: 700;
+  size: 17px;
+  line-height: 22.19px;
+}
+
+.errorInput {
+  border: 2px solid vars.$error-secondary;
+  padding: 16px 12px;
+  border-radius: 12px;
+  width: 100%;
+  background-color: vars.$error-testory;
+  @include mx.hoverwithBorder(vars.$error-secondary, 0.3s);
+  @include mx.inputFocus(vars.$error-secondary, 0.3s);
+}
+
+.spacing {
+  letter-spacing: 16px;
+}
+
+.otpContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 56px;
+  margin: 20px 0px;
+  gap: 6px;
+}

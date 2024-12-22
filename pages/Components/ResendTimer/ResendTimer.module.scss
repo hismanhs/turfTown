@@ -1,0 +1,12 @@
+@use '../../../styles/mixins' as mx;
+@use '../../../styles/variables' as vars;
+
+.resendButton {
+    @include mx.text-style(18px, 600, vars.$re-send-color, 24.55px);
+    margin-right: 6px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.resendText {
+    @include mx.text-style(18px, 600, vars.$re-send-text-color, 24.55px);
+}

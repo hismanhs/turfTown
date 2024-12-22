@@ -1,19 +1,17 @@
 
 import React, { useMemo } from "react";
 import styles from "./ButtonnWithIcon.module.scss";
-import Image from "next/image";
-
 interface ButtonWithIconProp {
   children?: any;
   Text: string;
-  ActiveStatus: string;
+  ActiveStatus?: string;
   handleClick: () => void
 }
 
 const ButtonWithIcon: React.FC<ButtonWithIconProp> = ({
   children,
   Text,
-  ActiveStatus,
+  ActiveStatus = '',
   handleClick
 }) => {
   const statusClassMap = {

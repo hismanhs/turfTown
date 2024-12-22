@@ -1,27 +1,28 @@
 
 import React, { useMemo } from "react";
-import styles from "./OtpComponent.module.scss";
-interface otpScreenProp {
+import styles from "./InputOtp.module.scss";
+
+interface InputOtpProp {
     Icon: boolean;
     number: number;
     handleChange: (e: any) => void;
-    Error: boolean
+    Error?: boolean
 }
 
-const OtpComponent: React.FC<otpScreenProp> = ({
+const InputOtp: React.FC<InputOtpProp> = ({
     Icon,
     number,
     handleChange,
-    Error = true
+    Error = false
 }) => {
     const textClass = useMemo(() => Icon ? `${styles.InputBox} ${styles.spacing}` : styles.InputBox, [Icon])
 
     return (
         <div className={styles.otpContainer} >
-                <input className={Error ? `${styles.errorInput} ${styles.spacing}` : textClass} placeholder="Enter the 4 digit code" onChange={handleChange} value={number} />
+            <input className={Error ? `${styles.errorInput} ${styles.spacing}` : textClass} placeholder="Enter the 4 digit code" onChange={handleChange} value={number} />
             {Error && <div className={styles.error}>Incorrect Code! </div>}
         </div>
     );
 };
 
-export default OtpComponent;
+export default InputOtp;

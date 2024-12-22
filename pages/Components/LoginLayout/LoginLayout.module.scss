@@ -1,0 +1,147 @@
+@use '../../../styles/mixins' as mx;
+@use '../../../styles/variables' as vars;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint =="mobile" {
+    @media (max-width: vars.$mobile-screen) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =="tablet" {
+    @media (max-width: vars.$tablet-screen) {
+      @content;
+    }
+  }
+}
+
+@mixin window-size {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin large-font-bold {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43.65px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: vars.$primary-color;
+  @include window-size;
+}
+
+.leftPane {
+  display: flex;
+  width: 60%;
+
+  @include responsive("tablet") {
+    width: 100%;
+  }
+}
+
+.leftPanelContainer {
+  margin: auto;
+  padding: 1rem;
+  min-width: 476px;
+  min-height: 650px;
+
+  @include responsive("mobile") {
+    min-width: 400px;
+  }
+}
+
+.rightPane {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive("tablet") {
+    display: none;
+  }
+}
+
+.rightPaneImageOne {
+  color: transparent;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-3deg);
+}
+
+.rightaneImageTwo {
+  color: transparent;
+  position: absolute;
+  top: -23px;
+  transform: rotate(0deg);
+}
+
+.largeText {
+  margin: 2rem 0rem 1rem 0rem;
+  @include large-font-bold;
+}
+
+.smallText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.28px;
+  color: vars.$secondary-text-color;
+  margin-bottom: 4rem;
+}
+
+.italicText {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30.01px;
+  font-style: italic;
+  color: vars.$gradient-color;
+  position: absolute;
+  bottom: 40px;
+}
+
+.OrContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0rem;
+}
+
+.OrBarLine {
+  height: 1px;
+  width: 50%;
+  background-color: #C8C8C8;
+}
+
+.OrText {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.82px;
+  color: vars.$gradient-color;
+  margin: 0 20px;
+}
+
+.iconStyle {
+  margin-left: 6px;
+}
+
+
+.textDidntGet {
+  @include mx.text-style(18px, 600, #000000, 24.55px);
+  margin-right: 6px;
+}
+
+.flex {
+  display: flex;
+}
+.element {
+  position: absolute;
+  left: 50%;
+  bottom: 10px; 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.hidden {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+}
